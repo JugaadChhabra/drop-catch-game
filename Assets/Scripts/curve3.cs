@@ -20,7 +20,7 @@ public class curve3 : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
-        speedModifier = 0.65f;
+        speedModifier = 0.6f;
         StartCoroutine(SpawnPrefabs());
     }
     private IEnumerator SpawnPrefabs()

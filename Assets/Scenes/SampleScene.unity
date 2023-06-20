@@ -423,14 +423,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.73333335}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: adaac68d8e5d693499597113889d11d3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 73c7f17e63559c5459d21c92f7966de0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -609,14 +609,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.73333335}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: adaac68d8e5d693499597113889d11d3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 73c7f17e63559c5459d21c92f7966de0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -965,7 +965,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.3708375, y: 0}
@@ -1051,14 +1051,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.72156864}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4d1ecb6124423ace2a3630fc99c00035, type: 3}
+  m_Texture: {fileID: 2800000, guid: be4434e563a80ec409e4f55514c48554, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1227,14 +1227,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.72156864}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4d1ecb6124423ace2a3630fc99c00035, type: 3}
+  m_Texture: {fileID: 2800000, guid: be4434e563a80ec409e4f55514c48554, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1595,6 +1595,7 @@ GameObject:
   - component: {fileID: 946463233}
   - component: {fileID: 946463236}
   - component: {fileID: 946463237}
+  - component: {fileID: 946463238}
   m_Layer: 0
   m_Name: player
   m_TagString: basket
@@ -1614,6 +1615,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae07f0d8819ed4e92a46c53c6a2fed1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightBoundary: 1.1
+  leftBoundary: -1.1
+  animator: {fileID: 946463238}
+  detectSwipeOnlyAfterRelease: 0
+  SWIPE_THRESHOLD: 20
   effect: {fileID: 1429954232896169633, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
   speed: 0.005
 --- !u!212 &946463234
@@ -1654,10 +1660,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -800377947
+  m_SortingLayerID: 610572571
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 37f18789e57b3ed5d8aae67f54e50e52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86eec3ac2e852a74eabb460d7e0fd70a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1676,8 +1682,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946463232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -3.374, z: -5.7}
-  m_LocalScale: {x: 0.08503358, y: 0.08503358, z: 0.08503358}
+  m_LocalPosition: {x: 0, y: -3.3969, z: -2.03}
+  m_LocalScale: {x: 0.20081235, y: 0.20081235, z: 0.20081235}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1696,18 +1702,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0354528, y: 0.15727472}
+  m_Offset: {x: -4.2078333, y: 2.4480126}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 30.719997, y: 30.719997}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.062122, y: 24.086765}
+  m_Size: {x: 4.1065025, y: 3.6228404}
   m_EdgeRadius: 0
 --- !u!50 &946463237
 Rigidbody2D:
@@ -1730,6 +1736,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!95 &946463238
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946463232}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4159a870c26f7664fbc9a101b897bba4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &999469081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,14 +1808,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.72156864}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4d1ecb6124423ace2a3630fc99c00035, type: 3}
+  m_Texture: {fileID: 2800000, guid: be4434e563a80ec409e4f55514c48554, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1965,14 +1992,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.73333335}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: adaac68d8e5d693499597113889d11d3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 73c7f17e63559c5459d21c92f7966de0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2484,7 +2511,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 984333289
+  m_SortingLayerID: 6071883
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -2549,14 +2576,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.73333335}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: adaac68d8e5d693499597113889d11d3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 73c7f17e63559c5459d21c92f7966de0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2629,7 +2656,7 @@ GameObject:
   - component: {fileID: 1494831748}
   - component: {fileID: 1494831747}
   m_Layer: 0
-  m_Name: Screenshot from 2023-06-14 20-15-03
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2673,7 +2700,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1030084209
+  m_SortingLayerID: -1352854679
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 04b7b727edce602dd9805a4eb9356653, type: 3}
@@ -2695,7 +2722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494831746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26, y: 0.0247, z: 0}
+  m_LocalPosition: {x: -0.16, y: 0.0247, z: 0}
   m_LocalScale: {x: 1, y: 1.1467961, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2784,14 +2811,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.73333335}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: adaac68d8e5d693499597113889d11d3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 73c7f17e63559c5459d21c92f7966de0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2977,14 +3004,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.72156864}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4d1ecb6124423ace2a3630fc99c00035, type: 3}
+  m_Texture: {fileID: 2800000, guid: be4434e563a80ec409e4f55514c48554, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3262,14 +3289,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.72156864}
+  m_Color: {r: 0.8509804, g: 0.37254903, b: 0.58431375, a: 0.7607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4d1ecb6124423ace2a3630fc99c00035, type: 3}
+  m_Texture: {fileID: 2800000, guid: be4434e563a80ec409e4f55514c48554, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
